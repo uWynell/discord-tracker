@@ -1,0 +1,42 @@
+{
+  "name": "discord-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "eslint": "^7.11.0",
+    "jest": "^26.5.2",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.(ts|js)\"",
+    "lint": "eslint .",
+    "test": "jest --config jest.json src",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uWynell/discord-tracker.git"
+  },
+  "author": "Wynell",
+  "keywords": ["discord", "tracker", "discord.js"],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uWynell/discord-tracker/issues"
+  },
+  "homepage": "https://github.com/uWynell/discord-tracker#readme",
+  "files": [
+    "lib/**/*"
+  ]
+}
