@@ -1,1 +1,3 @@
-export const HelloWorld = 'Hello, world!';
+import DiscordTracker from './DiscordTracker';
+
+export default DiscordTracker;
